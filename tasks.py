@@ -1,15 +1,9 @@
-import os
-
+from typing import Any
 from invoke import task
 
 
-def print_and_run(c, cmd):
-    print("Running cmd:\n$ " + cmd)
-    c.run(cmd, pty=True)  #!/bin/bash
-
-
 @task
-def clean(c):
+def clean(c: Any) -> None:
     """
     Clean up the project and remove all temporary .pyc files
     and local application logs"
@@ -21,7 +15,7 @@ def clean(c):
 
 
 @task
-def start(c):
+def start(c: Any) -> None:
     """
     Build and start all services
     """
@@ -29,7 +23,7 @@ def start(c):
 
 
 @task
-def deploy(c):
+def deploy(c: Any) -> None:
     """
     Deploy function
     """

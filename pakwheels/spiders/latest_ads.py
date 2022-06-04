@@ -1,4 +1,4 @@
-from typing import List, Optional
+from typing import List, Optional, Generator
 import scrapy
 from scrapy.spiders import Spider
 from scrapy.http.response.text import TextResponse
@@ -24,7 +24,7 @@ class LatestAdsSpider(Spider):
         "https://www.pakwheels.com/used-cars/search/-/?page=10",
     ]
 
-    def parse(self, response: TextResponse):
+    def parse(self, response: TextResponse) -> Generator:
         soup = BeautifulSoup(response.body, "html.parser")
         # print(response.body)
         ad_divs: List[BeautifulSoup] = soup.find_all(

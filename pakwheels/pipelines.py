@@ -10,12 +10,16 @@ from typing import List
 import uuid
 from itemadapter import ItemAdapter
 import json
+
+from scrapy import Spider
 from pakwheels.items import PakwheelsItem, PakwheelsList
 from scrapy.exceptions import DropItem
 
 
 class PakwheelsPipeline:
-    def process_item(self, item_list: PakwheelsList, spider):
+    def process_item(
+        self, item_list: PakwheelsList, spider: Spider
+    ) -> List[PakwheelsItem]:
         # print("Title: ", item.get("name"))
         # print("City: ", item.get("city"))
         file_name = uuid.uuid1()
