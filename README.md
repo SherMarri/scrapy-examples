@@ -8,7 +8,13 @@ A scrapy crawler that retrieves the used vehicles ads from first 10 pages of [Pa
 pip install -r requirements.txt
 ```
 
-## How to deploy
+## Run locally
+
+```
+scrapy crawler latest_ads
+```
+
+## Deploy to AWS Lambda
 
 ```
 invoke deploy
