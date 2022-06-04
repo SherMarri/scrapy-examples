@@ -14,6 +14,8 @@ pip install -r requirements.txt
 invoke deploy
 ```
 
+### OR
+
 ```
 cd venv/lib/python3.9/site-packages
 zip -r ../../../../deployment-package.zip .
