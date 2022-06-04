@@ -2,7 +2,17 @@
 
 Examples demonstrating Scrapy skills
 
+## Build
+
+```
+pip install -r requirements.txt
+```
+
 ## How to deploy
+
+```
+invoke deploy
+```
 
 ```
 cd venv/lib/python3.9/site-packages
