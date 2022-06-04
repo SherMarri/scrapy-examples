@@ -1,6 +1,6 @@
 # scrapy-examples
 
-Examples demonstrating Scrapy skills
+A scrapy crawler that retrieves the used vehicles ads from first 10 pages of [PakWheels](https://www.pakwheels.com).
 
 ## Build
 
